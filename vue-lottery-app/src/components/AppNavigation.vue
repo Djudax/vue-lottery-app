@@ -2,13 +2,34 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
     <div class="container-fluid">
       <div class="navbar-nav mx-auto">
-        <router-link to="/" class="nav-link">Home</router-link>
-        <router-link to="/about" class="nav-link">About</router-link>
-        <router-link to="/lottery" class="nav-link">Lottery</router-link>
+        <router-link
+          to="/"
+          class="nav-link"
+          active-class="active"
+          exact-active-class="active"
+        >Home</router-link>
+        <router-link
+          to="/about"
+          class="nav-link"
+          active-class="active"
+        >About</router-link>
+        <router-link
+          to="/lottery"
+          class="nav-link"
+          active-class="active"
+        >Lottery</router-link>
         <template v-if="!authStore.isAuthenticated">
-          <router-link to="/login" class="nav-link">Login</router-link>
+          <router-link
+            to="/login"
+            class="nav-link"
+            active-class="active"
+          >Login</router-link>
         </template>
-        <button v-else @click="authStore.logout" class="btn btn-outline-danger btn-sm ms-2">
+        <button
+          v-else
+          @click="authStore.logout"
+          class="btn btn-outline-danger btn-sm ms-2"
+        >
           Logout
         </button>
       </div>
