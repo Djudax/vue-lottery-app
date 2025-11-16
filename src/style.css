@@ -1,0 +1,14 @@
+/* src/style.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #0d6efd !important;
+  background-color: rgba(13, 110, 253, 0.1);
+  border-radius: 0.375rem;
+}
